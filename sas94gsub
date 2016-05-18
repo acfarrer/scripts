@@ -1,0 +1,16 @@
+#!/bin/sh -p
+### SASGSUB 94 Execution Script 
+# Copied from /usr/bin.sasgsub and modified for 94. Andrew Farrer 17Dec2015
+# Usage sasgsub -gridsubmitpgm sasmac_catlg_usecase.sas
+# Usage sasgsub -GRIDRUNSASLM
+# Usage sasgsub -GRIDRUNSASDMS
+
+# JAVA_HOME=/sasfs/prod/java/jre32/jre1.6.0_16
+# export JAVA_HOME
+
+# LD_LIBRARY_PATH=$JAVA_HOME/lib/i386/server:$JAVA_HOME/lib/i386:/sasfs/prod/sas/92/sasgsubclient/sashome/SASGridManagerClientUtility/9.2/bin:$LD_LIBRARY_PATH
+# export LD_LIBRARY_PATH
+
+/sasfs/prod/sas/94/sasgsubclient/sasconfig/Lev1/Applications/SASGridManagerClientUtility/9.4/sasgsub 
+
+# /sasfs/prod/sas/92/sasgsubclient/sashome/SASGridManagerClientUtility/9.2/bin/sasgsub -GRIDCONFIG /sasfs/sasgsub_prod/sasgsubp92.cfg $*

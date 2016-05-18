@@ -1,0 +1,10 @@
+#! /bin/sh
+### Start SAS/Share server on port 5001 with JDBC jars included. Not working
+## For testing JDBC connections 
+CLASSPATH=/sasfs/test/sas/94/controlserver/sashome/SASVersionedJarRepository/eclipse/plugins/sas.intrnet.javatools_904300.0.0.20150204190000_v940m3/sas.intrnet.javatools.jar
+
+cd ~/sascode
+/sasfs/test/sas/94/controlserver/sashome/SASFoundation/9.4/sas -work ~/saswork/ -sysin ~/sascode/share_server_start.sas &
+sleep 5
+netstat -an | grep 5001
+
